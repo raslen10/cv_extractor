@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Extractor with Ollama</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>CV Information Extractor</h1>
+        <p class="subtitle">Compare Llama3, Mistral, and Phi for CV extraction</p>
+        
+        <form method="post" enctype="multipart/form-data" class="upload-form">
+            <div class="form-group">
+                <label for="file">Upload CV (PDF or Image):</label>
+                <input type="file" name="file" id="file" accept=".pdf,.png,.jpg,.jpeg" required>
+            </div>
+            <button type="submit" class="btn">Process CV</button>
+        </form>
+
+        {% if error %}
+            <div class="alert error">{{ error }}</div>
+        {% endif %}
+
+        {% if result %}
+            <div class="results-section">
+                <h2>Processing Results for {{ result.filename }}</h2>
+                
+                <div class="extracted-text">
+                    <h3>Extracted Text (First 500 chars):</h3>
+                    <pre>{{ result.text }}</pre>
+                </div>
+                
+                <div class="model-results">
+                    <h3>Model Comparisons</h3>
+                    {% for model, extraction in result.extractions.items() %}
+                        <div class="model-result">
+                            <h4>{{ model.upper() }} Extraction</h4>
+                            {% if 'error' in extraction %}
+                                <div class="alert error">Error: {{ extraction.error }}</div>
+                            {% else %}
+                                <pre>{{ extraction | tojson(indent=2) }}</pre>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+                
+                {% if 'evaluation' in result %}
+                    <div class="evaluation-section">
+                        <h3>Evaluation Against Ground Truth</h3>
+                        
+                        <div class="metrics-summary">
+                            <h4>Performance Summary</h4>
+                            <table>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Skills (F1)</th>
+                                    <th>Education (F1)</th>
+                                    <th>Experience (F1)</th>
+                                </tr>
+                                {% for model in MODELS %}
+                                    {% if model in result.evaluation %}
+                                        <tr>
+                                            <td>{{ model }}</td>
+                                            {% for field in ['name', 'email', 'phone'] %}
+                                                <td class="{% if result.evaluation[model][field]['correct'] %}correct{% else %}incorrect{% endif %}">
+                                                    {{ result.evaluation[model][field]['correct'] }}
+                                                </td>
+                                            {% endfor %}
+                                            {% for field in ['skills', 'education', 'experience'] %}
+                                                <td class="score">{{ "%.2f"|format(result.evaluation[model][field]['f1']) }}</td>
+                                            {% endfor %}
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            </table>
+                        </div>
+                        
+                        {% if 'report' in result %}
+                            <div class="detailed-report">
+                                <h4>Detailed Field Analysis</h4>
+                                {% for field, analysis in result.report.field_analysis.items() %}
+                                    <div class="field-analysis">
+                                        <h5>{{ field|title }}</h5>
+                                        <p>Best model: <strong>{{ analysis.best_model }} (F1: {{ "%.2f"|format(analysis.best_f1) }})</strong></p>
+                                        <table>
+                                            <tr>
+                                                <th>Model</th>
+                                                <th>F1 Score</th>
+                                            </tr>
+                                            {% for model, score in analysis.models.items() %}
+                                                <tr class="{% if model == analysis.best_model %}best-model{% endif %}">
+                                                    <td>{{ model }}</td>
+                                                    <td>{{ "%.2f"|format(score) }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                {% endfor %}
+                                
+                                <div class="overall-summary">
+                                    <h5>Overall Best Model: {{ result.report.summary.best_model }} (Avg F1: {{ "%.2f"|format(result.report.summary.best_f1) }})</h5>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="download-section">
+                        <a href="{{ url_for('download_file', filename=result.filename.split('.')[0] + '_results.json') }}" 
+                           class="btn download-btn">
+                            Download Full Results (JSON)
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
