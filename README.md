@@ -65,7 +65,7 @@ Skills: 20%
 Education: 25%
 
 Experience: 25%
-
+```
 🚀 Installation
 1. Prerequisites
 Python 3.9+
