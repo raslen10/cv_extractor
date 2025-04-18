@@ -1,0 +1,32 @@
+{
+  "name": "ALEX SMITH",
+  "email": "alexsmith@email.com",
+  "phone": "(987) 654-3210",
+  "skills": [
+    "Docker",
+    "Kubernetes",
+    "FastAPI",
+    "MLflow",
+    "Kubeflow",
+    "Airflow",
+    "AWS Bedrock",
+    "GCP AI Platform",
+    "Python",
+    "Go",
+    "Rust"
+  ],
+  "education": [
+    {
+      "degree": "MS in Artificial Intelligence",
+      "institution": "MIT",
+      "year": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "title": "AI Engineer",
+      "company": "TechCorp AI",
+      "duration": "2020-Present"
+    }
+  ]
+}

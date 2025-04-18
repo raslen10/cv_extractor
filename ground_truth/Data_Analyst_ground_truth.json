@@ -1,0 +1,29 @@
+{
+  "name": "DAVID WILSON",
+  "email": "davidw@email.com",
+  "phone": "(444) 555-6666",
+  "skills": [
+    "SQL",
+    "Python (Pandas)",
+    "Tableau",
+    "Power BI",
+    "MySQL",
+    "Snowflake",
+    "A/B Testing",
+    "Regression"
+  ],
+  "education": [
+    {
+      "degree": "BS in Statistics",
+      "institution": "University of Washington",
+      "year": "2021"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Data Analyst",
+      "company": "Data Insights Co",
+      "duration": "2021-Present"
+    }
+  ]
+}

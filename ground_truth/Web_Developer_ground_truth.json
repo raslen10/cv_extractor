@@ -1,0 +1,32 @@
+{
+  "name": "MICHAEL BROWN",
+  "email": "michaelb@email.com",
+  "phone": "(555) 123-4567",
+  "skills": [
+    "React",
+    "Vue",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "Django",
+    "MongoDB",
+    "PostgreSQL",
+    "AWS",
+    "Docker",
+    "CI/CD"
+  ],
+  "education": [
+    {
+      "degree": "BS in Computer Science",
+      "institution": "University of Texas",
+      "year": "2019"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Web Developer",
+      "company": "WebTech Solutions",
+      "duration": "2019-Present"
+    }
+  ]
+}

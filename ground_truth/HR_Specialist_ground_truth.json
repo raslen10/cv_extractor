@@ -1,0 +1,28 @@
+{
+  "name": "LISA MARTINEZ",
+  "email": "lisa.m@email.com",
+  "phone": "(666) 777-8888",
+  "skills": [
+    "Technical Recruiting",
+    "Workday",
+    "BambooHR",
+    "Surveys",
+    "Programs",
+    "Labor Laws",
+    "Policies"
+  ],
+  "education": [
+    {
+      "degree": "MS in Human Resources",
+      "institution": "University of Colorado",
+      "year": "2019"
+    }
+  ],
+  "experience": [
+    {
+      "title": "HR Business Partner",
+      "company": "TechStart Inc",
+      "duration": "2019-Present"
+    }
+  ]
+}

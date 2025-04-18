@@ -1,0 +1,29 @@
+{
+  "name": "OLIVIA SCOTT",
+  "email": "olivia.s@email.com",
+  "phone": "(333) 444-5555",
+  "skills": [
+    "Splunk",
+    "Wireshark",
+    "NIST",
+    "ISO 27001",
+    "Kali Linux",
+    "Metasploit",
+    "AWS",
+    "Azure"
+  ],
+  "education": [
+    {
+      "degree": "BS in Cybersecurity",
+      "institution": "George Washington University",
+      "year": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Security Operations Analyst",
+      "company": "CyberDefense Inc",
+      "duration": "2020-Present"
+    }
+  ]
+}

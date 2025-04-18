@@ -1,0 +1,28 @@
+{
+  "name": "JAMES WALKER",
+  "email": "james.w@email.com",
+  "phone": "(999) 000-1111",
+  "skills": [
+    "Product Vision",
+    "Interviews",
+    "Personas",
+    "OKRs",
+    "North Star Metric",
+    "Scrum",
+    "Kanban"
+  ],
+  "education": [
+    {
+      "degree": "BS in Computer Science",
+      "institution": "University of Oregon",
+      "year": "2016"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Product Manager",
+      "company": "SaaS Tech Co",
+      "duration": "2018-Present"
+    }
+  ]
+}

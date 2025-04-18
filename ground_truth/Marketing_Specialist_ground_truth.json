@@ -1,0 +1,30 @@
+{
+  "name": "SARAH JOHNSON",
+  "email": "sarahj@email.com",
+  "phone": "(111) 222-3333",
+  "skills": [
+    "SEO",
+    "SEM",
+    "Social Media",
+    "Google Analytics",
+    "HubSpot",
+    "Copywriting",
+    "Graphic Design",
+    "Salesforce",
+    "HubSpot"
+  ],
+  "education": [
+    {
+      "degree": "MBA in Marketing",
+      "institution": "Northwestern University",
+      "year": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Digital Marketing Manager",
+      "company": "Growth Marketing Inc",
+      "duration": "2020-Present"
+    }
+  ]
+}

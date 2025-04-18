@@ -1,0 +1,27 @@
+{
+  "name": "ROBERT TAYLOR",
+  "email": "robert.t@email.com",
+  "phone": "(222) 333-4444",
+  "skills": [
+    "15+ direct reports",
+    "JIRA",
+    "Scrum",
+    "$5M+ annual budgets",
+    "OKRs",
+    "Roadmaps"
+  ],
+  "education": [
+    {
+      "degree": "MBA",
+      "institution": "Wharton School",
+      "year": "2015"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Engineering Manager",
+      "company": "Tech Giant Inc",
+      "duration": "2018-Present"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "EMILY CHEN",
+  "email": "emilyc@email.com",
+  "phone": "(777) 888-9999",
+  "skills": [
+    "NumPy",
+    "SciPy",
+    "QuantLib",
+    "VaR",
+    "Stress Testing",
+    "Python",
+    "R",
+    "C++",
+    "Options",
+    "Swaps",
+    "Bonds"
+  ],
+  "education": [
+    {
+      "degree": "PhD in Financial Mathematics",
+      "institution": "Boston University",
+      "year": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Quantitative Developer",
+      "company": "Global Financial Services",
+      "duration": "2020-Present"
+    }
+  ]
+}

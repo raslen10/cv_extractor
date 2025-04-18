@@ -1,0 +1,36 @@
+{
+  "name": "JANE DOE",
+  "email": "janedoe@email.com",
+  "phone": "(123) 456-7890",
+  "skills": [
+    "Python",
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Spark",
+    "Hadoop",
+    "Databricks",
+    "AWS SageMaker",
+    "GCP Vertex AI",
+    "Transformers",
+    "BERT",
+    "GPT",
+    "Matplotlib",
+    "Seaborn",
+    "Plotly"
+  ],
+  "education": [
+    {
+      "degree": "PhD in Computer Science",
+      "institution": "Stanford University",
+      "year": "2021"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Data Scientist",
+      "company": "AI Research Lab",
+      "duration": "2021-Present"
+    }
+  ]
+}
