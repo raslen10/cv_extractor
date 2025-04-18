@@ -93,12 +93,12 @@ pip install ollama
 3. Project Setup
 ``` 
 # Clone repository
-git clone https://github.com/raslen10/cv-extractor.git
+git clone https://github.com/raslen10/cv_extractor.git
 cd cv-extractor
 
 # Create virtual environment
 python -m venv myenv
-source myenv/bin/activate  # On Windows: venv\Scripts\activate
+source myenv/bin/activate  # On Windows: myenv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
