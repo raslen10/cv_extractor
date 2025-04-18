@@ -1,0 +1,4 @@
+model,name_match,email_match,phone_match,skills_match,education_match,experience_match
+llama3,1,1,1,0,1,1
+mistral,1,1,1,0,1,0
+phi,1,1,0,0,0,0
